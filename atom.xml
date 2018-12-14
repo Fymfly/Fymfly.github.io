@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-22T00:38:42.167Z</updated>
+  <updated>2018-12-14T12:51:03.642Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,22 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git</title>
+    <link href="http://yoursite.com/2018/12/14/git/"/>
+    <id>http://yoursite.com/2018/12/14/git/</id>
+    <published>2018-12-14T12:50:22.000Z</published>
+    <updated>2018-12-14T12:51:03.642Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="上传git" scheme="http://yoursite.com/tags/%E4%B8%8A%E4%BC%A0git/"/>
+    
+  </entry>
   
   <entry>
     <title>自我介绍</title>
