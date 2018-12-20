@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-12-19T13:24:13.851Z</updated>
+  <updated>2018-12-20T03:55:52.708Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2018/12/19/php%E9%9D%A2%E8%AF%95%E9%A2%981/"/>
     <id>http://yoursite.com/2018/12/19/php面试题1/</id>
     <published>2018-12-19T08:28:02.000Z</published>
-    <updated>2018-12-19T13:24:13.851Z</updated>
+    <updated>2018-12-20T03:55:52.708Z</updated>
     
     <content type="html"><![CDATA[<p><strong> php面试题1：</strong> <excerpt in="" index="" |="" 首页摘要=""></excerpt></p><a id="more"></a><h1 id="1、php语言的第一大优势是跨平台，什么是跨平台？"><a href="#1、php语言的第一大优势是跨平台，什么是跨平台？" class="headerlink" title="1、php语言的第一大优势是跨平台，什么是跨平台？"></a>1、php语言的第一大优势是跨平台，什么是跨平台？</h1><p><em>PHP的运行环境最优搭配为Apache+MySQL+PHP，此运行环境可以在不同操作系统（例如windows、Linux等）上配置，不受操作系统的限制，所以叫跨平台</em></p><h1 id="2、WEB开发中数据提交方式有几种？有什么区别？百度使用哪种方式？"><a href="#2、WEB开发中数据提交方式有几种？有什么区别？百度使用哪种方式？" class="headerlink" title="2、WEB开发中数据提交方式有几种？有什么区别？百度使用哪种方式？"></a>2、WEB开发中数据提交方式有几种？有什么区别？百度使用哪种方式？</h1><p><em>1、Get与post两种方式</em><br><em>2、区别</em><br><em><li>Get从服务器获取数据，post向服务器传送数据</li></em><br><em><li>Get传值在url中可见，post在url中不可见</li></em><br><em><li>Get传值一般在2KB以内，post传值大小可以在php.ini中进行设置</li></em><br><em><li>get安全性非低，post安全性较高，执行效率却比Post高</li></em></p><h1 id="3、AJAX的优势是什么"><a href="#3、AJAX的优势是什么" class="headerlink" title="3、AJAX的优势是什么"></a>3、AJAX的优势是什么</h1><p><em>AJAX是异步传输技术，实现局部刷新，从而减轻服务器的压力，提高用户体验</em></p><h1 id="4、安全对一套程序来说至关重要，请说说在开发中应该注意哪些安全机制？"><a href="#4、安全对一套程序来说至关重要，请说说在开发中应该注意哪些安全机制？" class="headerlink" title="4、安全对一套程序来说至关重要，请说说在开发中应该注意哪些安全机制？"></a>4、安全对一套程序来说至关重要，请说说在开发中应该注意哪些安全机制？</h1><p><em><li>1、防远程提交</li></em><br><em><li>2、防SQL注入，对特殊代码进行过滤</li></em><br><em><li>3、防止注册机灌水，使用验证码</li></em></p>]]></content>
     
@@ -41,7 +41,7 @@
     <link href="http://yoursite.com/2018/12/17/git/"/>
     <id>http://yoursite.com/2018/12/17/git/</id>
     <published>2018-12-17T01:43:44.000Z</published>
-    <updated>2018-12-19T13:25:22.858Z</updated>
+    <updated>2018-12-20T03:56:12.069Z</updated>
     
     <content type="html"><![CDATA[<p><strong> git：</strong> <excerpt in="" index="" |="" 首页摘要=""></excerpt></p><a id="more"></a><h3 id="1、首先在GitHub官网上创建账号"><a href="#1、首先在GitHub官网上创建账号" class="headerlink" title="1、首先在GitHub官网上创建账号"></a>1、首先在GitHub官网上创建账号</h3><p><img src="img/git/注册.png" alt="blockchain" title="区块链"></p>]]></content>
     
@@ -61,7 +61,7 @@
     <link href="http://yoursite.com/2018/11/22/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/"/>
     <id>http://yoursite.com/2018/11/22/自我介绍/</id>
     <published>2018-11-22T00:34:36.000Z</published>
-    <updated>2018-12-19T13:26:00.809Z</updated>
+    <updated>2018-12-20T03:55:57.050Z</updated>
     
     <content type="html"><![CDATA[<p><strong> 自我介绍：</strong> <excerpt in="" index="" |="" 首页摘要=""></excerpt></p><a id="more"></a><p><strong><em>本人性格热情开朗，待人友好，为人诚实谦虚。工作勤奋，认真负责，能吃苦耐劳，尽职尽责，有耐心。具有亲和力，平易近人，善于与人沟通。</em></strong></p>]]></content>
     
