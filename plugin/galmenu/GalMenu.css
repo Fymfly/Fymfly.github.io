@@ -88,22 +88,22 @@ a {
 }
 
 .ring a:nth-of-type(1) {
-	background-position:0 0;
+	background-position:3px -2px;
 }
 .ring a:nth-of-type(2) {
-	background-position:-100px 0;
+	background-position:-97px 0;
 }
 .ring a:nth-of-type(3) {
-	background-position:-200px 0;
+	background-position:-200px -2px;
 }
 .ring a:nth-of-type(4) {
-	background-position:-300px 0;
+	background-position:-308px 0;
 }
 .ring a:nth-of-type(5) {
-	background-position:-400px 0;
+	background-position:-410px 0;
 }
 .ring a:nth-of-type(6) {
-	background-position:-500px 0;
+	background-position:-506px 0;
 }
 .ring a {
 	display:inline-block;

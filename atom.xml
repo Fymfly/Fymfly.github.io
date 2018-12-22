@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-12-20T03:55:52.708Z</updated>
+  <updated>2018-12-21T12:24:04.969Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,17 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>php面试题1</title>
-    <link href="http://yoursite.com/2018/12/19/php%E9%9D%A2%E8%AF%95%E9%A2%981/"/>
-    <id>http://yoursite.com/2018/12/19/php面试题1/</id>
-    <published>2018-12-19T08:28:02.000Z</published>
-    <updated>2018-12-20T03:55:52.708Z</updated>
+    <title>PHP常见函数</title>
+    <link href="http://yoursite.com/2018/12/21/PHP%E5%B8%B8%E8%A7%81%E5%87%BD%E6%95%B0/"/>
+    <id>http://yoursite.com/2018/12/21/PHP常见函数/</id>
+    <published>2018-12-21T06:53:36.000Z</published>
+    <updated>2018-12-21T12:24:04.969Z</updated>
     
-    <content type="html"><![CDATA[<p><strong> php面试题1：</strong> <excerpt in="" index="" |="" 首页摘要=""></excerpt></p><a id="more"></a><h1 id="1、php语言的第一大优势是跨平台，什么是跨平台？"><a href="#1、php语言的第一大优势是跨平台，什么是跨平台？" class="headerlink" title="1、php语言的第一大优势是跨平台，什么是跨平台？"></a>1、php语言的第一大优势是跨平台，什么是跨平台？</h1><p><em>PHP的运行环境最优搭配为Apache+MySQL+PHP，此运行环境可以在不同操作系统（例如windows、Linux等）上配置，不受操作系统的限制，所以叫跨平台</em></p><h1 id="2、WEB开发中数据提交方式有几种？有什么区别？百度使用哪种方式？"><a href="#2、WEB开发中数据提交方式有几种？有什么区别？百度使用哪种方式？" class="headerlink" title="2、WEB开发中数据提交方式有几种？有什么区别？百度使用哪种方式？"></a>2、WEB开发中数据提交方式有几种？有什么区别？百度使用哪种方式？</h1><p><em>1、Get与post两种方式</em><br><em>2、区别</em><br><em><li>Get从服务器获取数据，post向服务器传送数据</li></em><br><em><li>Get传值在url中可见，post在url中不可见</li></em><br><em><li>Get传值一般在2KB以内，post传值大小可以在php.ini中进行设置</li></em><br><em><li>get安全性非低，post安全性较高，执行效率却比Post高</li></em></p><h1 id="3、AJAX的优势是什么"><a href="#3、AJAX的优势是什么" class="headerlink" title="3、AJAX的优势是什么"></a>3、AJAX的优势是什么</h1><p><em>AJAX是异步传输技术，实现局部刷新，从而减轻服务器的压力，提高用户体验</em></p><h1 id="4、安全对一套程序来说至关重要，请说说在开发中应该注意哪些安全机制？"><a href="#4、安全对一套程序来说至关重要，请说说在开发中应该注意哪些安全机制？" class="headerlink" title="4、安全对一套程序来说至关重要，请说说在开发中应该注意哪些安全机制？"></a>4、安全对一套程序来说至关重要，请说说在开发中应该注意哪些安全机制？</h1><p><em><li>1、防远程提交</li></em><br><em><li>2、防SQL注入，对特殊代码进行过滤</li></em><br><em><li>3、防止注册机灌水，使用验证码</li></em></p>]]></content>
+    <content type="html"><![CDATA[<p><strong> PHP常见函数：</strong> <excerpt in="" index="" |="" 首页摘要=""></excerpt></p><a id="more"></a><h1 id="1、PHP处理数组的常用函数"><a href="#1、PHP处理数组的常用函数" class="headerlink" title="1、PHP处理数组的常用函数"></a>1、PHP处理数组的常用函数</h1><p><em>1、array() 创建数组</em><br><em>2、count() 返回数组中元素的数目</em><br><em>3、array_push() 将一个或多个元素插入数组的末尾</em><br><em>4、array_column() 返回输入数组中某个单一列的值</em><br><em>5、array_combine() 合并数组</em><br><em>6、array_reverse() 反转数组</em><br><em>7、array_unique()  删除数组中的重复值</em><br><em>8、in_array() 检查数组中是否存在指定的值</em></p><h1 id="2、PHP处理字符串的常用函数？（重点看函数的’参数’和’返回值’）"><a href="#2、PHP处理字符串的常用函数？（重点看函数的’参数’和’返回值’）" class="headerlink" title="2、PHP处理字符串的常用函数？（重点看函数的’参数’和’返回值’）"></a>2、PHP处理字符串的常用函数？（重点看函数的’参数’和’返回值’）</h1><p><em>1、trim() 移除字符串两侧的空白字符和其他字符</em><br><em>2、substr() 返回字符串的一部分</em><br><em>3、substr_replace() 替换字符串</em><br><em>4、substr_count() 计算子串在字符串中出现的次数</em><br><em>5、strtolower() 把字符串转换为小写字母</em><br><em>6、strtoupper() 把字符串转换为大写字母</em><br><em>7、strtr() 转换字符串中特定的字符</em><br><em>8、strrchr() 查找字符串在另一个字符串中最后一次出现</em><br><em>9、strstr() 查找字符串在另一字符串中的第一次出现（对大小写敏感）</em><br><em>10、strrev() 反转字符串</em><br><em>11、strlen() 返回字符串的长度</em><br><em>12、explode() 把字符串打散为数组</em><br><em>13、toString() 把数组转换为字符串</em><br><em>14、str_replace() 替换字符串中的一些字符（对大小写敏感）</em><br><em>15、print() 输出一个或多个字符串</em><br><em>16、is_string() 检测变量是否是字符串</em><br><em>17、strip_tags() 从一个字符串中去除HTML标签</em><br><em>18、mb_substr() 用来截中文与英文的函数</em></p><h1 id="3、PHP处理时间的常用函数"><a href="#3、PHP处理时间的常用函数" class="headerlink" title="3、PHP处理时间的常用函数"></a>3、PHP处理时间的常用函数</h1><p><em>1、date_default_timezone_get() 返回默认时区</em><br><em>2、date_default_timezone_set() 设置默认时区</em><br><em>3、date() 格式化本地时间/日期</em><br><em>4、getdate() 返回日期/时间信息</em><br><em>5、gettimeofday() 返回当前时间信息</em><br><em>6、microtime() 返回当前时间的微秒数</em><br><em>7、mktime() 返回一个日期的 Unix时间戳</em><br><em>8、strtotime() 将任何英文文本的日期或时间描述解析为Unix时间戳</em><br><em>9、time() 返回当前时间的时间戳</em></p><h1 id="4、PHP处理数据库的常用函数"><a href="#4、PHP处理数据库的常用函数" class="headerlink" title="4、PHP处理数据库的常用函数"></a>4、PHP处理数据库的常用函数</h1><p><em>1、mysql_affected_rows() 取的前一次MySQL操作所影响的记录行数</em><br><em>2、mysql_change_user() 不赞成。改变活动连接中登录的用户</em><br><em>3、mysql_client_encoding() 返回当前连接的字符集的名称</em><br><em>4、mysql_close() 关闭非持久的MySQL连接</em><br><em>5、mysql_connect() 打开非持久的MySQL连接</em><br><em>6、mysql_create_db() 不赞成。新建MySQL数据库，使用mysql_query()代替</em><br><em>7、mysql_data_seek() 移动记录指针</em><br><em>8、mysql_db_name() 从对mysql_list_dbs() 的调用返回数据库名称</em><br><em>详细的看 <a href="http://www.w3school.com.cn/php/php_ref_mysql.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/php/php_ref_mysql.asp</a></em> </p><h1 id="5、PHP操作文件和目录（杂）的常用函数"><a href="#5、PHP操作文件和目录（杂）的常用函数" class="headerlink" title="5、PHP操作文件和目录（杂）的常用函数"></a>5、PHP操作文件和目录（杂）的常用函数</h1><p><em>1、basename() 返回路径中的文件名</em><br><em>2、dirname() 返回路径中的目录部分</em><br><em>3、pathinfo() 返回文件路径的信息</em><br><em>4、fopen() 打开文件或者URL</em><br><em>5、fstat() 通过已打开的文件指针取得文件信息</em><br><em>6、filesize() 取得文件大小</em><br><em>7、disk_free_space() 返回目录中的可用空间</em><br><em>8、fileatime() 取得文件的上传访问时间</em><br><em>9、file() 把整个文件读入一个数组中</em><br><em>10、fgets() 从文件指针中读取一行</em><br><em>11、feof() 测试文件指针是否到了文件结束的位置</em><br><em>12、fclose() 关闭一个已打开的文件指针</em><br><em>13、fgetss() 从文件指针中读取一行并过滤掉HTML标记</em><br><em>14、file_exists() 检查文件或者目录是否存在</em><br><em>15、file_put_contents() 将一个字符串写入文件</em></p><h1 id="6、PHP操作文件"><a href="#6、PHP操作文件" class="headerlink" title="6、PHP操作文件"></a>6、PHP操作文件</h1><p><em>1、readfile() 函数读取文件，并把它写入输出缓冲</em><br><em>2、fopen() 打开文件</em></p><li>r:  打开文件为只读</li><br><li>w:  打开文件为只写。删除文件的内容或创建一个新的文件，如果它不存在（覆盖给特定）</li> ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt; php面试题1：&lt;/strong&gt; &lt;excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;&lt;/excerpt&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt; PHP常见函数：&lt;/strong&gt; &lt;excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;&lt;/excerpt&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="goodgoodstudy daydayup" scheme="http://yoursite.com/tags/goodgoodstudy-daydayup/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PHP经典面试题</title>
+    <link href="http://yoursite.com/2018/12/19/PHP%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <id>http://yoursite.com/2018/12/19/PHP经典面试题/</id>
+    <published>2018-12-19T08:28:02.000Z</published>
+    <updated>2018-12-22T01:02:33.384Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong> PHP经典面试题：</strong> <excerpt in="" index="" |="" 首页摘要=""></excerpt></p><a id="more"></a><h1 id="1、php语言的第一大优势是跨平台，什么是跨平台？"><a href="#1、php语言的第一大优势是跨平台，什么是跨平台？" class="headerlink" title="1、php语言的第一大优势是跨平台，什么是跨平台？"></a>1、php语言的第一大优势是跨平台，什么是跨平台？</h1><p><em>PHP的运行环境最优搭配为Apache+MySQL+PHP，此运行环境可以在不同操作系统（例如windows、Linux等）上配置，不受操作系统的限制，所以叫跨平台</em></p><h1 id="2、WEB开发中数据提交方式有几种？有什么区别？百度使用哪种方式？"><a href="#2、WEB开发中数据提交方式有几种？有什么区别？百度使用哪种方式？" class="headerlink" title="2、WEB开发中数据提交方式有几种？有什么区别？百度使用哪种方式？"></a>2、WEB开发中数据提交方式有几种？有什么区别？百度使用哪种方式？</h1><p><em>1、Get与post两种方式</em><br><em>2、区别</em><br><em><li>Get从服务器获取数据，post向服务器传送数据</li></em><br><em><li>Get传值在url中可见，post在url中不可见</li></em><br><em><li>Get传值一般在2KB以内，post传值大小可以在php.ini中进行设置</li></em><br><em><li>get安全性非低，post安全性较高，执行效率却比Post高</li></em></p><h1 id="3、AJAX的优势是什么"><a href="#3、AJAX的优势是什么" class="headerlink" title="3、AJAX的优势是什么"></a>3、AJAX的优势是什么</h1><p><em>AJAX是异步传输技术，实现局部刷新，从而减轻服务器的压力，提高用户体验</em></p><h1 id="4、安全对一套程序来说至关重要，请说说在开发中应该注意哪些安全机制？"><a href="#4、安全对一套程序来说至关重要，请说说在开发中应该注意哪些安全机制？" class="headerlink" title="4、安全对一套程序来说至关重要，请说说在开发中应该注意哪些安全机制？"></a>4、安全对一套程序来说至关重要，请说说在开发中应该注意哪些安全机制？</h1><p><em>1、防远程提交</em><br><em>2、防SQL注入，对特殊代码进行过滤</em><br><em>3、防止注册机灌水，使用验证码</em></p><h1 id="5、在程序的开发中，如何提高程序的运行效率？"><a href="#5、在程序的开发中，如何提高程序的运行效率？" class="headerlink" title="5、在程序的开发中，如何提高程序的运行效率？"></a>5、在程序的开发中，如何提高程序的运行效率？</h1><p><em>1、优化SQL语句，查询语句中尽量不使用select </em>，用哪个字段查哪个字段；少用子查询可用表连接代替<em></em>2、数据表中创建索引<em></em>3、对程序中经常用到的数据生成缓存*</p><h1 id="6、PHP可否与其它的数据库搭配使用？"><a href="#6、PHP可否与其它的数据库搭配使用？" class="headerlink" title="6、PHP可否与其它的数据库搭配使用？"></a>6、PHP可否与其它的数据库搭配使用？</h1><p><em>PHP与MYSQL数据库是最优搭配，当然PHP也可以去其它的数据库搭配使用，例如MSSQL等，PHP中预留了操作MSSQL的函数，只要开启就可以使用</em></p><h1 id="7、现在编程中经常采取MVC三层结构，请问MVC分别指哪三层，有什么优点？"><a href="#7、现在编程中经常采取MVC三层结构，请问MVC分别指哪三层，有什么优点？" class="headerlink" title="7、现在编程中经常采取MVC三层结构，请问MVC分别指哪三层，有什么优点？"></a>7、现在编程中经常采取MVC三层结构，请问MVC分别指哪三层，有什么优点？</h1><p><em>业务模型、视图、控制器，由控制器层调用模型处理数据，然后将数据映射到视图层进行显示</em><br><em>优点：</em><br><em>1、可以实现代码的重用性，避免产生代码冗余</em><br><em>2、M和V的实现代码分离，从而使同一个程序可以使用不同的表现形式</em></p><h1 id="8、对json数据格式的理解"><a href="#8、对json数据格式的理解" class="headerlink" title="8、对json数据格式的理解"></a>8、对json数据格式的理解</h1><p><em>JSON(JavaScript Object Notation)是一种轻量级的数据交换格式，json数据格式固定，可以被多种语言用作数据的传递</em><br><em>json_decode:   把json格式的字符串转换为PHP变量</em><br><em>json_encode:   把PHP变量转换为json格式的字符串</em></p><h1 id="9、Print、echo、print-r有什么区别？"><a href="#9、Print、echo、print-r有什么区别？" class="headerlink" title="9、Print、echo、print_r有什么区别？"></a>9、Print、echo、print_r有什么区别？</h1><p><em>1、echo和print都可以作为输出，但是echo不是函数，没有返回值，print是函数有返回值</em><br><em>2、print 是打印字符串</em><br><em>3、print_r 则是打印复合类型，如数组 对象</em></p><h1 id="10、SESSION和COOKIE-的区别"><a href="#10、SESSION和COOKIE-的区别" class="headerlink" title="10、SESSION和COOKIE 的区别"></a>10、SESSION和COOKIE 的区别</h1><p><em>1、存储位置：session存储与服务器，cookie存储于浏览器</em><br><em>2、安全性：session相对于cookie更安全</em><br><em>3、session为‘会话服务’，在使用时需要开启服务，cookie不需要开启，可以直接用</em></p><h1 id="11、content-type有哪些种类"><a href="#11、content-type有哪些种类" class="headerlink" title="11、content-type有哪些种类"></a>11、content-type有哪些种类</h1><p><em>content-type：用于定义网络文件的类型和网页编码的，决定浏览器以什么形式、什么编码读取这个文件</em><br><em>种类：HTML、xml、json、text</em></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt; PHP经典面试题：&lt;/strong&gt; &lt;excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;&lt;/excerpt&gt;&lt;/p&gt;
     
     </summary>
     
