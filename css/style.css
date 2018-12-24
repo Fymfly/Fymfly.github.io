@@ -2356,6 +2356,7 @@ pre .javascript .function {
   border: 1px solid #e1e1e2;
   margin: 0 auto;
   padding: 5px;
+  border-radius: 50%;
 }
 .author {
   margin: 10px 0px;
