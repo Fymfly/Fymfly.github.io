@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="PHP常见函数：">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-21T12:24:04.969Z">
+<meta property="og:updated_time" content="2018-12-24T07:02:50.355Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PHP常见函数">
 <meta name="twitter:description" content="PHP常见函数：">
@@ -43,7 +43,7 @@
     <h2 class="author">Fymfly</h2>
     <h3 class="description">全栈</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>5</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>6</strong><br>文章</div></a>
       <a href="/categories"><div><strong>0</strong><br>分类</div></a>
       <a href="/tags"><div><strong>2</strong><br>标签</div></a>
     </div>
@@ -109,11 +109,14 @@
 <h1 id="4、PHP处理数据库的常用函数"><a href="#4、PHP处理数据库的常用函数" class="headerlink" title="4、PHP处理数据库的常用函数"></a>4、PHP处理数据库的常用函数</h1><p><em>1、mysql_affected_rows() 取的前一次MySQL操作所影响的记录行数</em><br><em>2、mysql_change_user() 不赞成。改变活动连接中登录的用户</em><br><em>3、mysql_client_encoding() 返回当前连接的字符集的名称</em><br><em>4、mysql_close() 关闭非持久的MySQL连接</em><br><em>5、mysql_connect() 打开非持久的MySQL连接</em><br><em>6、mysql_create_db() 不赞成。新建MySQL数据库，使用mysql_query()代替</em><br><em>7、mysql_data_seek() 移动记录指针</em><br><em>8、mysql_db_name() 从对mysql_list_dbs() 的调用返回数据库名称</em><br><em>详细的看 <a href="http://www.w3school.com.cn/php/php_ref_mysql.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/php/php_ref_mysql.asp</a></em> </p>
 <h1 id="5、PHP操作文件和目录（杂）的常用函数"><a href="#5、PHP操作文件和目录（杂）的常用函数" class="headerlink" title="5、PHP操作文件和目录（杂）的常用函数"></a>5、PHP操作文件和目录（杂）的常用函数</h1><p><em>1、basename() 返回路径中的文件名</em><br><em>2、dirname() 返回路径中的目录部分</em><br><em>3、pathinfo() 返回文件路径的信息</em><br><em>4、fopen() 打开文件或者URL</em><br><em>5、fstat() 通过已打开的文件指针取得文件信息</em><br><em>6、filesize() 取得文件大小</em><br><em>7、disk_free_space() 返回目录中的可用空间</em><br><em>8、fileatime() 取得文件的上传访问时间</em><br><em>9、file() 把整个文件读入一个数组中</em><br><em>10、fgets() 从文件指针中读取一行</em><br><em>11、feof() 测试文件指针是否到了文件结束的位置</em><br><em>12、fclose() 关闭一个已打开的文件指针</em><br><em>13、fgetss() 从文件指针中读取一行并过滤掉HTML标记</em><br><em>14、file_exists() 检查文件或者目录是否存在</em><br><em>15、file_put_contents() 将一个字符串写入文件</em></p>
 <h1 id="6、PHP操作文件"><a href="#6、PHP操作文件" class="headerlink" title="6、PHP操作文件"></a>6、PHP操作文件</h1><p><em>1、readfile() 函数读取文件，并把它写入输出缓冲</em><br><em>2、fopen() 打开文件</em></p>
-<li>r:  打开文件为只读</li><br><li>w:  打开文件为只写。删除文件的内容或创建一个新的文件，如果它不存在（覆盖给特定）</li> 
+<li>r:      打开文件为只读</li><br><li>w:      打开文件为只写。删除文件的内容或创建一个新的文件，如果它不存在（覆盖给特定）</li><br><li>a:      打开文件只为写。文件中的现有数据会保留。文件指针在文件结尾开始。如果文件不存在，创建新的文件</li><br><li>x:      创建新文件只写。如果文件已存在，返回FALSE和错误</li><br><li>r+:     打开文件为读/写、文件指针在文件开头开始</li><br><li>w+:     打开文件为读/写。如果它不存在，删除文件内容或创建新文件</li><br><li>a+:     打开文件为读/写。文件中已有的数据会被保留。如果文件不存在，创建新文件</li><br><li>x+:     创建新文件读/写。如果文件已存在，返回FALSE和错误</li>
+
+<p><em>3、fread()     读取文件</em><br><em>4、fclose()    关闭文件</em><br><em>5、fgets()     读取单行文件</em><br><em>6、feof()      检查是否已到达文件末尾</em><br><em>7、fgetc()     从文件中读取单个字符</em><br><em>8、fwrite()    写入文件</em></p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/12/21/PHP常见函数/" data-id="cjq1k6a16000058vzoivmmbw6" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/12/21/PHP常见函数/" data-id="cjq3pfwul0002s0vz05u0lydk" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/goodgoodstudy-daydayup/">goodgoodstudy daydayup</a></li></ul>
@@ -123,6 +126,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2018/12/24/MySQL面试题/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          MySQL面试题
+        
+      </div>
+    </a>
   
   
     <a href="/2018/12/19/PHP经典面试题/" id="article-nav-older" class="article-nav-link-wrap">
@@ -176,7 +188,7 @@
     <h2 class="author">Fymfly</h2>
     <h3 class="description">全栈</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>5</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>6</strong><br>文章</div></a>
       <a href="/categories"><div><strong>0</strong><br>分类</div></a>
       <a href="/tags"><div><strong>2</strong><br>标签</div></a>
     </div>

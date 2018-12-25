@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>MySQL面试题 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="MySQL面试题：">
+<meta name="keywords" content="Hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL面试题">
+<meta property="og:url" content="http://yoursite.com/2018/12/24/MySQL面试题/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="MySQL面试题：">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-12-24T11:46:08.498Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MySQL面试题">
+<meta name="twitter:description" content="MySQL面试题：">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/plugin/bganimation/bg.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <div class="widget-wrap mobile-header">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <img class="avatar" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3208924267,2612527597&amp;fm=11&amp;gp=0.jpg">
+    <h2 class="author">Fymfly</h2>
+    <h3 class="description">全栈</h3>
+    <div class="count-box">
+      <a href="/archives"><div><strong>6</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>0</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>2</strong><br>标签</div></a>
+    </div>
+    <ul class="blog-link">
+     
+          <a href="/" title="Home">
+            <li>主页</li>
+          </a>
+        
+          <a href="/archives" title="Archives">
+            <li>归档</li>
+          </a>
+        
+          <a href="/categories" title="Categories">
+            <li>分类</li>
+          </a>
+        
+          <a href="/tags" title="Tags">
+            <li>标签</li>
+          </a>
+        
+    </ul>
+  </div>
+</div>
+
+        <section id="main"><article id="post-MySQL面试题" class="wow slideInRight article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/12/24/MySQL面试题/" class="article-date">
+  <time class="post-time" datetime="2018-12-24T07:53:35.000Z" itemprop="datePublished">
+    <span class="post-month">12月</span><br>
+    <span class="post-day">24</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      MySQL面试题
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong> MySQL面试题：</strong> <excerpt in="" index="" |="" 首页摘要=""></excerpt></p>
+<a id="more"></a>
+<h1 id="1、MySQL设计表的三范式"><a href="#1、MySQL设计表的三范式" class="headerlink" title="1、MySQL设计表的三范式"></a>1、MySQL设计表的三范式</h1><p><em>1NF：字段不可分</em><br><em>2NF：有主键，非主键字段依赖主键</em><br><em>3NF：非主键字段不能相互依赖</em></p>
+<h4 id="解释："><a href="#解释：" class="headerlink" title="解释："></a>解释：</h4><p><em>1NF：原子性，字段不可分，否则就不是关系型数据库</em><br><em>2NF：唯一性，一个表只说明一个事务</em><br><em>3FN：每列都与主键有直接关系，不存在传递依赖</em></p>
+<h1 id="2、InnoDB和MyISAM的区别"><a href="#2、InnoDB和MyISAM的区别" class="headerlink" title="2、InnoDB和MyISAM的区别"></a>2、InnoDB和MyISAM的区别</h1><h4 id="InnoDB-是MySQL官方默认的引擎，特点："><a href="#InnoDB-是MySQL官方默认的引擎，特点：" class="headerlink" title="InnoDB 是MySQL官方默认的引擎，特点："></a>InnoDB 是MySQL官方默认的引擎，特点：</h4><p><em>1、支持事务</em><br><em>2、支持外键约束</em><br><em>3、行级锁（在并发修改数据时效率更高）</em><br><em>4、可以从灾难中恢复（更加安全）</em><br><em>5、新版的InNoDB性能也非常好</em><br><em>6、每个表会在硬盘上生成两个文件：.frm文件（保存表结构），.ibd（保存数据）</em></p>
+<h4 id="MyISAM-引擎是MySQL最早支持的一种引擎，它的特点是："><a href="#MyISAM-引擎是MySQL最早支持的一种引擎，它的特点是：" class="headerlink" title="MyISAM 引擎是MySQL最早支持的一种引擎，它的特点是："></a>MyISAM 引擎是MySQL最早支持的一种引擎，它的特点是：</h4><p><em>1、读，写速度非常快</em><br><em>2、表级锁</em><br><em>3、不支持事务</em><br><em>4、不支持外键约束</em><br><em>5、无法自动从在灾难中恢复</em><br><em>6、每个表会在硬盘上生成三个文件：.frm文件（保存表结构），.MYI（保存索引），.MYD（保存数据）</em></p>
+<h1 id="3、常见的关系型数据库管理系统产品？"><a href="#3、常见的关系型数据库管理系统产品？" class="headerlink" title="3、常见的关系型数据库管理系统产品？"></a>3、常见的关系型数据库管理系统产品？</h1><p><em>Oracle，SQL Server，MySQL，Sybase，DB2，Access等</em></p>
+<h1 id="SQL语言包括哪几部分？每部分都有哪些操作关键字？"><a href="#SQL语言包括哪几部分？每部分都有哪些操作关键字？" class="headerlink" title="SQL语言包括哪几部分？每部分都有哪些操作关键字？"></a>SQL语言包括哪几部分？每部分都有哪些操作关键字？</h1><h6 id="部分："><a href="#部分：" class="headerlink" title="部分："></a>部分：</h6><li>数据定义（DDL）</li><br><li>数据操纵（DML）</li><br><li>数据控制（DCL）</li><br><li>数据查询（DQL）</li>
+
+<h6 id="关键字："><a href="#关键字：" class="headerlink" title="关键字："></a>关键字：</h6><li>数据定义：Create Table，Alter Table，Drop Table，Create/Drop Index</li><br><li>数据操纵：Select，insert，update，delete</li><br><li>数据控制：grant，revoke</li><br><li>数据查询：select</li>
+
+<h1 id="4、完整性约束包括哪些？"><a href="#4、完整性约束包括哪些？" class="headerlink" title="4、完整性约束包括哪些？"></a>4、完整性约束包括哪些？</h1><h6 id="数据完整性是指数据的精确和可靠性"><a href="#数据完整性是指数据的精确和可靠性" class="headerlink" title="数据完整性是指数据的精确和可靠性"></a>数据完整性是指数据的精确和可靠性</h6><p><em>1、实体完整性：规定表的每一行在表中是唯一的实体</em><br><em>2、域完整性：是指表中的列必须满足某种特定的数据类型约束，其中约束又包括取值范围、精度等规定</em><br><em>3、参照完整性：是指两个表的主关键字和外关键字的数据应一致，保证了表之间的数据的一致性，防止了数据丢失或无意义的数据在数据库中扩散</em><br><em>4、用户定义的完整性：不同的关系数据库系统根据其应用环境的不同，往往还需要一些特殊的约束条件。用户定义的完整性即是针对某个特定关系数据库的约束条件，它反映某一具体应用必须满足的语义要求</em></p>
+<h6 id="与表有关的约束：包括列约束和表约束"><a href="#与表有关的约束：包括列约束和表约束" class="headerlink" title="与表有关的约束：包括列约束和表约束"></a>与表有关的约束：包括列约束和表约束</h6><h1 id="5、什么是事务？及其特性？"><a href="#5、什么是事务？及其特性？" class="headerlink" title="5、什么是事务？及其特性？"></a>5、什么是事务？及其特性？</h1><p><em>事务，是一系列的数据库操作，是数据库应用的基本逻辑单位</em></p>
+<h6 id="事务特性："><a href="#事务特性：" class="headerlink" title="事务特性："></a>事务特性：</h6><p><em>1、原子性：即不可分割性，事务要么全部被执行，要么就全部不被执行</em><br><em>2、一致性或可串性：事务的执行使得数据库从一种正确状态转换成另一种正确状态</em><br><em>3、隔离性：在事务正确提交之前，不允许把该事务对数据的任何改变提供给任何其他事务</em><br><em>4、持久性：事务正确提交后，其结果将永久保存到数据库中，即使在事务提交后有了其他故障，事务的处理结果也会得到保存</em></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/12/24/MySQL面试题/" data-id="cjq3pfwub0000s0vzu5hu7t5r" class="article-share-link">分享</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/12/21/PHP常见函数/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">PHP常见函数</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <h1 class="blog-title">Hexo</h1>
+    <h2 class="blog-subtitle">你好，兄dei</h2>
+    <ul class="blog-link">
+     
+          <a href="/" title="Home">
+            <li>主页</li>
+          </a>
+        
+          <a href="/archives" title="Archives">
+            <li>归档</li>
+          </a>
+        
+          <a href="/categories" title="Categories">
+            <li>分类</li>
+          </a>
+        
+          <a href="/tags" title="Tags">
+            <li>标签</li>
+          </a>
+        
+    </ul>
+  </div>
+</div>
+
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <img class="avatar" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3208924267,2612527597&amp;fm=11&amp;gp=0.jpg">
+    <h2 class="author">Fymfly</h2>
+    <h3 class="description">全栈</h3>
+    <div class="count-box">
+      <a href="/archives"><div><strong>6</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>0</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>2</strong><br>标签</div></a>
+    </div>
+
+
+
+    <div class="social-link">
+      
+        <a class="hvr-bounce-in" href="http://github.com/ShanaMaid" target="_blank" title="Github">
+          Github
+        </a>
+      
+    </div>
+
+    <div class="friend-link">
+      <h2>友情链接</h2>
+      
+        <a class="hvr-bounce-in" href="http://blog.shanamaid.top/" target="_blank" title="ShanaMaid">
+          ShanaMaid
+        </a>
+      
+    </div>
+  </div>
+</div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy;2017 - 2018 Fymfly<br>
+      由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动 | 
+      主题-<a href="https://github.com/ShanaMaid/hexo-theme-shana">Shana</a>
+      
+    </div>
+    
+  </div>
+</footer>
+    </div>
+    
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="//apps.bdimg.com/libs/wow/0.1.6/wow.min.js"></script>
+<script>
+new WOW().init();
+</script>   
+
+
+  <link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
+  <script src="/plugin/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+  <link rel="stylesheet" href="/plugin/galmenu/GalMenu.css">
+  <script src="/plugin/galmenu/GalMenu.js"></script>
+  <div class="GalMenu GalDropDown">
+      <div class="circle" id="gal">
+        <div class="ring">
+          
+            <a href="/" title="" class="menuItem">首页</a>
+          
+            <a href="/tags" title="" class="menuItem">标签</a>
+          
+            <a href="/categories" title="" class="menuItem">分类</a>
+          
+            <a href="/archives" title="" class="menuItem">归档</a>
+          
+            <a href="/xxxxxxxxx" title="" class="menuItem">xxx</a>
+          
+            <a href="/xxxxxxx" title="" class="menuItem">xxxx</a>
+          
+        </div>
+        
+          <audio id="audio" src="#"></audio>
+        
+      </div> 
+</div>
+<div id="overlay" style="opacity: 1; cursor: pointer;"></div>
+  <script type="text/javascript">var items = document.querySelectorAll('.menuItem');
+    for (var i = 0,
+    l = items.length; i < l; i++) {
+      items[i].style.left = (50 - 35 * Math.cos( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+      items[i].style.top = (50 + 35 * Math.sin( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%"
+    }</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('body').GalMenu({
+      'menu': 'GalDropDown'
+    })
+  });
+</script>
+
+  <section class="hidden-xs"> 
+  <ul class="cb-slideshow"> 
+    <li><span>苟利</span></li> 
+    <li><span>国家</span></li> 
+    <li><span>生死以</span></li> 
+    <li><span>岂能</span></li> 
+    <li><span>祸福</span></li> 
+    <li><span>趋避之</span></li> 
+  </ul>
+</section>
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
