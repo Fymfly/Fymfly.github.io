@@ -13,10 +13,12 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="MySQL面试题：">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-24T11:46:08.498Z">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1545793952377&di=d9a1932294b79b6ab72d6f2117df3621&imgtype=0&src=http%3A%2F%2Fimg.draveness.me%2Fmysql.png">
+<meta property="og:updated_time" content="2019-01-03T08:55:14.758Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL面试题">
 <meta name="twitter:description" content="MySQL面试题：">
+<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1545793952377&di=d9a1932294b79b6ab72d6f2117df3621&imgtype=0&src=http%3A%2F%2Fimg.draveness.me%2Fmysql.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -81,6 +83,16 @@
   </div>
   <div class="article-inner">
     
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1545793952377&di=d9a1932294b79b6ab72d6f2117df3621&imgtype=0&src=http%3A%2F%2Fimg.draveness.me%2Fmysql.png" rel="gallery_cjq4fyxhg0000vovzwknw1rwc">
+        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1545793952377&di=d9a1932294b79b6ab72d6f2117df3621&imgtype=0&src=http%3A%2F%2Fimg.draveness.me%2Fmysql.png" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
     
       <header class="article-header">
         
@@ -104,7 +116,7 @@
         <p><strong> MySQL面试题：</strong> <excerpt in="" index="" |="" 首页摘要=""></excerpt></p>
 <a id="more"></a>
 <h1 id="1、MySQL设计表的三范式"><a href="#1、MySQL设计表的三范式" class="headerlink" title="1、MySQL设计表的三范式"></a>1、MySQL设计表的三范式</h1><p><em>1NF：字段不可分</em><br><em>2NF：有主键，非主键字段依赖主键</em><br><em>3NF：非主键字段不能相互依赖</em></p>
-<h4 id="解释："><a href="#解释：" class="headerlink" title="解释："></a>解释：</h4><p><em>1NF：原子性，字段不可分，否则就不是关系型数据库</em><br><em>2NF：唯一性，一个表只说明一个事务</em><br><em>3FN：每列都与主键有直接关系，不存在传递依赖</em></p>
+<h4 id="解释："><a href="#解释：" class="headerlink" title="解释："></a>解释：</h4><p><em>1NF：原子性，字段不可分，否则就不是关系型数据库</em><br><em>2NF：唯一性，一个表只说明一个事务</em><br><em>3NF：每列都与主键有直接关系，不存在传递依赖</em></p>
 <h1 id="2、InnoDB和MyISAM的区别"><a href="#2、InnoDB和MyISAM的区别" class="headerlink" title="2、InnoDB和MyISAM的区别"></a>2、InnoDB和MyISAM的区别</h1><h4 id="InnoDB-是MySQL官方默认的引擎，特点："><a href="#InnoDB-是MySQL官方默认的引擎，特点：" class="headerlink" title="InnoDB 是MySQL官方默认的引擎，特点："></a>InnoDB 是MySQL官方默认的引擎，特点：</h4><p><em>1、支持事务</em><br><em>2、支持外键约束</em><br><em>3、行级锁（在并发修改数据时效率更高）</em><br><em>4、可以从灾难中恢复（更加安全）</em><br><em>5、新版的InNoDB性能也非常好</em><br><em>6、每个表会在硬盘上生成两个文件：.frm文件（保存表结构），.ibd（保存数据）</em></p>
 <h4 id="MyISAM-引擎是MySQL最早支持的一种引擎，它的特点是："><a href="#MyISAM-引擎是MySQL最早支持的一种引擎，它的特点是：" class="headerlink" title="MyISAM 引擎是MySQL最早支持的一种引擎，它的特点是："></a>MyISAM 引擎是MySQL最早支持的一种引擎，它的特点是：</h4><p><em>1、读，写速度非常快</em><br><em>2、表级锁</em><br><em>3、不支持事务</em><br><em>4、不支持外键约束</em><br><em>5、无法自动从在灾难中恢复</em><br><em>6、每个表会在硬盘上生成三个文件：.frm文件（保存表结构），.MYI（保存索引），.MYD（保存数据）</em></p>
 <h1 id="3、常见的关系型数据库管理系统产品？"><a href="#3、常见的关系型数据库管理系统产品？" class="headerlink" title="3、常见的关系型数据库管理系统产品？"></a>3、常见的关系型数据库管理系统产品？</h1><p><em>Oracle，SQL Server，MySQL，Sybase，DB2，Access等</em></p>
@@ -119,7 +131,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/12/24/MySQL面试题/" data-id="cjq3pv2nr0000o4vz8q36l4ui" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/12/24/MySQL面试题/" data-id="cjq4fyxhg0000vovzwknw1rwc" class="article-share-link">分享</a>
       
       
     </footer>
@@ -214,7 +226,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy;2017 - 2018 Fymfly<br>
+      &copy;2018 - 2019 Fymfly<br>
       由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动 | 
       主题-<a href="https://github.com/ShanaMaid/hexo-theme-shana">Shana</a>
       
