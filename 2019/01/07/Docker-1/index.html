@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Docker(1) | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Docker(1)：">
+<meta name="keywords" content="Hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker(1)">
+<meta property="og:url" content="http://yoursite.com/2019/01/07/Docker-1/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Docker(1)：">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-01-07T10:02:25.321Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Docker(1)">
+<meta name="twitter:description" content="Docker(1)：">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/plugin/bganimation/bg.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <div class="widget-wrap mobile-header">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <img class="avatar" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3208924267,2612527597&amp;fm=11&amp;gp=0.jpg">
+    <h2 class="author">Fymfly</h2>
+    <h3 class="description">全栈</h3>
+    <div class="count-box">
+      <a href="/archives"><div><strong>7</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>0</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>2</strong><br>标签</div></a>
+    </div>
+    <ul class="blog-link">
+     
+          <a href="/" title="Home">
+            <li>主页</li>
+          </a>
+        
+          <a href="/archives" title="Archives">
+            <li>归档</li>
+          </a>
+        
+          <a href="/categories" title="Categories">
+            <li>分类</li>
+          </a>
+        
+          <a href="/tags" title="Tags">
+            <li>标签</li>
+          </a>
+        
+    </ul>
+  </div>
+</div>
+
+        <section id="main"><article id="post-Docker-1" class="wow slideInRight article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/07/Docker-1/" class="article-date">
+  <time class="post-time" datetime="2019-01-07T09:06:42.000Z" itemprop="datePublished">
+    <span class="post-month">1月</span><br>
+    <span class="post-day">07</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Docker(1)
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong> Docker(1)：</strong> <excerpt in="" index="" |="" 首页摘要=""></excerpt></p>
+<a id="more"></a>
+<p>#对docker理解<br><em><li>1、概括就是容器，用于开发，交付和部署</li></em><br><em><li>2、容量是轻量的、可以保证开发和线上环境一致</li></em><br><em><li>3、容器是独立的、不受外在环境影响</li></em></p>
+<p>一 . 制作镜像</p>
+<p>我们下载的镜像都是官方默认的镜像，这些镜像有时无法满足我们个性化的要求，这时我们就可以自己来制作镜像。制作镜像有三种方法：</p>
+<p>使用 docker commit 方法</p>
+<p>优点：方便，一个指令（把一个现有的容器制作成一个镜像）<br>缺点：记录下制作的过程</p>
+<pre><code>2 . Dockerfile + docker build 指令
+
+
+
+3 . 本地文件系统导入模板
+</code></pre><p>docker commit</p>
+<pre><code>我们可以直接使用 docker commit 指令将一个容器制作成一个镜像
+</code></pre><p>docker commit 容器名称 镜像名称:标签</p>
+<p>Dockerfile</p>
+<pre><code>使用 Dockerfile 文件制作镜像的流程：
+
+
+    1、编写 Dockerfile 文件
+
+
+
+    2、执行 docker build 指令生成镜像。
+</code></pre><p>docker build -t 镜像名称:标签 Dockerfile文件所在目录</p>
+<pre><code>示例：从当前目录找 Dockerfile 文件，并制作一个叫做 test:1.0 的镜像
+</code></pre><p>docker build -t test:1.0 .</p>
+<pre><code>Dockerfile 详解
+
+
+    我们一般可以把一个 Docker 文件中的内部分为四部分：
+
+
+
+
+
+
+
+    指令说明：
+</code></pre><p>FROM：指定基础镜像，必须是第一条指令</p>
+<pre><code>镜像是一层一层的，最底层是操作系统，我们要制作镜像是必须要先使用 FROM 来指定基础镜像，然后我们是在这个基础镜像的基础上制作新镜像的：
+
+
+
+指令基础镜像：
+</code></pre><p>FROM 镜像:标签<br>            如</p>
+<p>FROM alpine:3.8</p>
+<p>MAINTAINER：指定作者名称</p>
+<pre><code>这个指令可以用来设置制作该镜像的作者的名称，这个指令不是必填的。
+</code></pre><p>FROM alpine:3.8</p>
+<p>MAINTAINER <a href="mailto:dmail_yjc@163.com" target="_blank" rel="noopener">dmail_yjc@163.com</a></p>
+<p>RUN：运行 shell 命令</p>
+<pre><code>在制作镜像过程中可以使用 RUN 来执行 shell 命令。
+
+
+
+比如，我们在创建镜像时，执行以下操作：
+
+
+
+    1、在镜像中创建 /php 目录
+
+    2、为镜像安装 vim 编辑器
+
+    3、设置 apk 的国内镜像源（多个指令用 &amp;&amp; 连接，如果指令太长可以使用 \ 写到下一行中）
+
+    4、更新 apk 的软件
+</code></pre><p>FROM alpine:3.8</p>
+<p>MAINTAINER <a href="mailto:fortheday@126.com" target="_blank" rel="noopener">fortheday@126.com</a></p>
+<p>RUN mkdir /php<br>RUN apk add vim<br>RUN echo <a href="http://mirrors.ustc.edu.cn/alpine/v3.8/main" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/alpine/v3.8/main</a> &gt; /etc/apk/repositories &amp;&amp; \<br>    echo <a href="http://mirrors.ustc.edu.cn/alpine/v3.8/community" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/alpine/v3.8/community</a> &gt;&gt; /etc/apk/repositories<br>RUN apk update &amp;&amp; apk upgrade</p>
+<p>ENV ：设置环境变量</p>
+<pre><code>可以使用 ENV 来设置镜像中的环境变量。
+</code></pre><p>ENV <key> <value></value></key></p>
+<p>EXPOSE：暴露端口<br>EXPOSE <port> [<port>…]</port></port></p>
+<pre><code>告诉 Docker 服务端容器暴露的端口号，供互联系统使用。在启动容器时需要通过 -P，Docker 主机会自动分配一个端口转发到指定的端口。
+</code></pre><p>EXPORT 80 800 880</p>
+<p>ENTRYPOINT</p>
+<pre><code>容器在启动时执行的命令，一个 Dockerfile 中只能有一个 ENTRYPOINT 指令，如果写了多个，那么只有最后一个会执行。
+
+
+
+语法有两种：
+</code></pre><p> ENTRYPOINT [“命令”, “参数1”, “参数2” …]<br> ENTRYPOINT 命令 参数1 参数2 ….</p>
+<pre><code>示例：在启动容器时，输出 &apos;hello&apos;
+</code></pre><p>ENTRYPOINT [“echo”, “hello”]</p>
+<p>CMD</p>
+<pre><code>容器在启动时执行的命令，一个 Dockerfile 中只能有一个 CMD 指令，如果写了多个，那么只有最后一个会执行。
+
+
+
+CMD 与 ENTRYPOINT 的不同：
+
+
+
+    1、CMD 设置的命令可以被 docker run 时指令的要执行的命令覆盖，而 ENTRYPOINT 的命令不会被覆盖。
+
+    2、CMD 和 ENTRYPOINT 同时存在时，CMD 中的内容会变成 ENTRYPOINT 中指令命令的默认参数，该参数可以被 docker run 时设置的命令覆盖。
+</code></pre><p>WORKDIR</p>
+<pre><code>指定当前的工作目录。
+
+
+
+比如下面指令先切换到了 /php 目录中，之后执行的指令都是在这个目录下的操作（相对于 cd /php）
+</code></pre><p>WORKDIR /php<br>mkdir abc       # 创建 /php/abc 目录</p>
+<p>VOLUME</p>
+<pre><code>创建一个可以从本地主机或其他容器挂载的挂载点，一般用来存放数据库和需要保持的数据等。
+
+
+
+格式：
+</code></pre><p>VOLUME [“目录”]<br>            指定了挂载目录之后，就可以在创建容器时使用 -v 或者 –volumes-from 来指令共享挂载这些目录。</p>
+<p>案例：制作带扩展的 PHP 镜像</p>
+<pre><code>创建 Dockerfile
+</code></pre><p>FROM php:7.2-fpm-alpine</p>
+<p>MAINTAINER “pitao <a href="mailto:dmail_yjc@163.com" target="_blank" rel="noopener">dmail_yjc@163.com</a>“</p>
+<h1 id="使用国内-apk-包源"><a href="#使用国内-apk-包源" class="headerlink" title="使用国内 apk 包源"></a>使用国内 apk 包源</h1><p>RUN echo <a href="http://mirrors.ustc.edu.cn/alpine/v3.8/main" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/alpine/v3.8/main</a> &gt; /etc/apk/repositories &amp;&amp; \<br>    echo <a href="http://mirrors.ustc.edu.cn/alpine/v3.8/community" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/alpine/v3.8/community</a> &gt;&gt; /etc/apk/repositories &amp;&amp; \<br>    apk update &amp;&amp; apk upgrade</p>
+<h1 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h1><p>RUN apk add libpng-dev autoconf gcc g++ make openssl-dev</p>
+<h5 id="安装-PHP-扩展"><a href="#安装-PHP-扩展" class="headerlink" title="安装 PHP 扩展"></a>安装 PHP 扩展</h5><h1 id="安装-gd、pdo-mysql-库"><a href="#安装-gd、pdo-mysql-库" class="headerlink" title="安装 gd、pdo_mysql 库"></a>安装 gd、pdo_mysql 库</h1><p>RUN docker-php-ext-install gd pdo_mysql sockets pcntl zip mysqli opcache</p>
+<h1 id="更新-pecl"><a href="#更新-pecl" class="headerlink" title="更新 pecl"></a>更新 pecl</h1><p>RUN pecl channel-update pecl.php.net</p>
+<h1 id="安装-redis-扩展"><a href="#安装-redis-扩展" class="headerlink" title="安装 redis 扩展"></a>安装 redis 扩展</h1><p>RUN echo -e “\n\n” | pecl install redis &amp;&amp; docker-php-ext-enable redis</p>
+<h1 id="安装-yaf-扩展"><a href="#安装-yaf-扩展" class="headerlink" title="安装 yaf 扩展"></a>安装 yaf 扩展</h1><p>RUN pecl install yaf &amp;&amp; docker-php-ext-enable yaf</p>
+<h1 id="安装-swoole-扩展"><a href="#安装-swoole-扩展" class="headerlink" title="安装 swoole 扩展"></a>安装 swoole 扩展</h1><p>RUN echo -e “yes\nyes\n\n\n\n\n” | pecl install swoole &amp;&amp; docker-php-ext-enable swoole</p>
+<h1 id="安装-git-composer"><a href="#安装-git-composer" class="headerlink" title="安装 git composer"></a>安装 git composer</h1><p>RUN apk add git composer</p>
+<pre><code>创建镜像
+</code></pre><p>docker build -t 镜像名:标签 .</p>
+<p>二 . 上传镜像</p>
+<pre><code>制作好镜像之后，我们就可以把镜像上传到 docker 的仓库中。
+
+
+
+docker 的官方网站为注册用户提供了一个 docker 仓库，我们可以把我们自己的镜像放到 docker 官方的仓库上。
+</code></pre><p>注册账号</p>
+<pre><code>首先需要到 docker 官方网站上注册一个账号(如果注册不了，那么需要翻墙)。https://hub.docker.com/
+</code></pre><p>登录</p>
+<pre><code>注册成功之后就可以登录，登录之后可以进入自己的仓库中
+</code></pre><p>上传镜像</p>
+<pre><code>有了自己的仓库之后，我们就可以把本地的镜像上传到仓库中给所有人使用。
+
+
+
+1、首先需要先在本地登录
+
+
+
+    执行以下指令进行登录（需要输入账号、密码）：
+</code></pre><p>docker login</p>
+<pre><code>2、打标签
+
+
+
+    登录成功之后，还需要为要上传的镜像打一个标签，注意这个标签必须要以 账号/ 开头：
+</code></pre><p>docker tag 本地镜像:标签   账号/镜像名称:标签</p>
+<pre><code>比如，我的账号是 pitao ，现在我要将本地的 php:1.0 上传到仓库中，那么首先我们对这个镜像打标签：
+</code></pre><p>docker   tag    php:1.0   fortheday001/php:1.0</p>
+<pre><code>3、上传
+
+
+
+    打完标签之后，我们就可以上传了：
+</code></pre><p>docker push 账号/镜像:标签<br>                如：</p>
+<p>这个指令会将镜像上传到 fortheday001 这个仓库中。</p>
+<p>构建私有仓库</p>
+<p>拉了镜像<br>docker pull registry</p>
+<p>创建容器<br>docker run –name dockerhub -d -p 绑定端口号:5000 registry</p>
+<p>上传到私有仓库<br>docker tag 镜像:标签  仓库IP:绑定端口号/镜像:标签<br>docker push 仓库IP:绑定端口号/镜像:标签<br>            如：</p>
+<p>docker tag alpine:3.8  localhost:5000/alpine:3.8<br>docker push localhost:5000/alpine:3.8</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/07/Docker-1/" data-id="cjqm5t6cv0000ekvzz9sx6v5j" class="article-share-link">分享</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/01/07/Docker-2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          Docker(2)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/12/24/MySQL面试题/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">MySQL面试题</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <h1 class="blog-title">Hexo</h1>
+    <h2 class="blog-subtitle">你好，兄dei</h2>
+    <ul class="blog-link">
+     
+          <a href="/" title="Home">
+            <li>主页</li>
+          </a>
+        
+          <a href="/archives" title="Archives">
+            <li>归档</li>
+          </a>
+        
+          <a href="/categories" title="Categories">
+            <li>分类</li>
+          </a>
+        
+          <a href="/tags" title="Tags">
+            <li>标签</li>
+          </a>
+        
+    </ul>
+  </div>
+</div>
+
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <img class="avatar" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3208924267,2612527597&amp;fm=11&amp;gp=0.jpg">
+    <h2 class="author">Fymfly</h2>
+    <h3 class="description">全栈</h3>
+    <div class="count-box">
+      <a href="/archives"><div><strong>7</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>0</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>2</strong><br>标签</div></a>
+    </div>
+
+
+
+    <div class="social-link">
+      
+        <a class="hvr-bounce-in" href="http://github.com/ShanaMaid" target="_blank" title="Github">
+          Github
+        </a>
+      
+    </div>
+
+    <div class="friend-link">
+      <h2>友情链接</h2>
+      
+        <a class="hvr-bounce-in" href="http://blog.shanamaid.top/" target="_blank" title="ShanaMaid">
+          ShanaMaid
+        </a>
+      
+    </div>
+  </div>
+</div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy;2018 - 2019 Fymfly<br>
+      由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动 | 
+      主题-<a href="https://github.com/ShanaMaid/hexo-theme-shana">Shana</a>
+      
+    </div>
+    
+  </div>
+</footer>
+    </div>
+    
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="//apps.bdimg.com/libs/wow/0.1.6/wow.min.js"></script>
+<script>
+new WOW().init();
+</script>   
+
+
+  <link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
+  <script src="/plugin/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+  <link rel="stylesheet" href="/plugin/galmenu/GalMenu.css">
+  <script src="/plugin/galmenu/GalMenu.js"></script>
+  <div class="GalMenu GalDropDown">
+      <div class="circle" id="gal">
+        <div class="ring">
+          
+            <a href="/" title="" class="menuItem">首页</a>
+          
+            <a href="/tags" title="" class="menuItem">标签</a>
+          
+            <a href="/categories" title="" class="menuItem">分类</a>
+          
+            <a href="/archives" title="" class="menuItem">归档</a>
+          
+            <a href="/xxxxxxxxx" title="" class="menuItem">xxx</a>
+          
+            <a href="/xxxxxxx" title="" class="menuItem">xxxx</a>
+          
+        </div>
+        
+          <audio id="audio" src="#"></audio>
+        
+      </div> 
+</div>
+<div id="overlay" style="opacity: 1; cursor: pointer;"></div>
+  <script type="text/javascript">var items = document.querySelectorAll('.menuItem');
+    for (var i = 0,
+    l = items.length; i < l; i++) {
+      items[i].style.left = (50 - 35 * Math.cos( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+      items[i].style.top = (50 + 35 * Math.sin( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%"
+    }</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('body').GalMenu({
+      'menu': 'GalDropDown'
+    })
+  });
+</script>
+
+  <section class="hidden-xs"> 
+  <ul class="cb-slideshow"> 
+    <li><span>苟利</span></li> 
+    <li><span>国家</span></li> 
+    <li><span>生死以</span></li> 
+    <li><span>岂能</span></li> 
+    <li><span>祸福</span></li> 
+    <li><span>趋避之</span></li> 
+  </ul>
+</section>
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
