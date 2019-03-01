@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="AJAX：">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-28T09:12:02.270Z">
+<meta property="og:updated_time" content="2019-03-01T13:00:12.734Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AJAX">
 <meta name="twitter:description" content="AJAX：">
@@ -103,7 +103,10 @@
       
         <p><strong> AJAX：</strong> <excerpt in="" index="" |="" 首页摘要=""></excerpt></p>
 <a id="more"></a>
-<h1 id="1、什么ajax"><a href="#1、什么ajax" class="headerlink" title="1、什么ajax"></a>1、什么ajax</h1><p><em>AJAX是“Asynchronous JavaScript and XML”的缩写。它是指一种创建交互式网页应用的网页开发技术</em></p>
+<h1 id="ajax跨域-—-https-segmentfault-com-a-1190000012469713-articleHeader7"><a href="#ajax跨域-—-https-segmentfault-com-a-1190000012469713-articleHeader7" class="headerlink" title="ajax跨域 —-  https://segmentfault.com/a/1190000012469713#articleHeader7"></a>ajax跨域 —-  <a href="https://segmentfault.com/a/1190000012469713#articleHeader7" target="_blank" rel="noopener">https://segmentfault.com/a/1190000012469713#articleHeader7</a></h1><h4 id="ajax跨域含义"><a href="#ajax跨域含义" class="headerlink" title="ajax跨域含义"></a>ajax跨域含义</h4><p><em>A网页设置的cookie，B网页不能打开，除非这两个网页“同源”。所谓“同源”指的是“三个相同”-（协议相同，域名相同，端口相同）</em></p>
+<h4 id="ajax跨域的原理"><a href="#ajax跨域的原理" class="headerlink" title="ajax跨域的原理"></a>ajax跨域的原理</h4><p><em>ajax出现请求跨域错误问题，主要原因就是因为浏览器的“同源政策”</em></p>
+<h4 id="如何解决ajax跨域"><a href="#如何解决ajax跨域" class="headerlink" title="如何解决ajax跨域"></a>如何解决ajax跨域</h4><p><em><li>CORS方式—CORS是一个w3c标准，全称是“跨域资源共享”。它允许浏览器想跨院服务器，发出XMLHTTPRequest请求，从而克服了ajax只能同源使用的限制</li></em><br><em><li>JSONP方式—jsonp之所以能够用来解决跨域方案，主要是因为 script 脚本拥有跨域能力，而JSONP正是利用这一点来实现</li></em><br><em><li>代理请求方式—与前面的方法不同，前面CORS是后端解决，而这个主要是前端对接口进行代理，也就是：1、前端ajax请求的是本地接口  2、本地接口接收到请求后向实际的接口请求数据，然后再将信息返回给前端   3、一般用Node.js即可代理（由于接口代理是有代价的，所以这个仅是开发过程中进行的）</li></em></p>
+<h1 id="1、什么是ajax"><a href="#1、什么是ajax" class="headerlink" title="1、什么是ajax"></a>1、什么是ajax</h1><p><em>AJAX是“Asynchronous JavaScript and XML”的缩写。它是指一种创建交互式网页应用的网页开发技术</em></p>
 <h1 id="2、为什么要用ajax-ajax的优点"><a href="#2、为什么要用ajax-ajax的优点" class="headerlink" title="2、为什么要用ajax(ajax的优点)"></a>2、为什么要用ajax(ajax的优点)</h1><p><em><li>1.通过异步模式，提升了用户体验</li></em><br><em><li>2.优化了浏览器和服务器之前的传输，减少不必要的数据往返，减少了带宽占用</li></em><br><em><li>3.Ajax引擎在客户端运行，承担了一部分来由服务器承担的工作，从而减少了大用户量下的服务器负载</li></em></p>
 <h1 id="3、请介绍一下XMLhttprequest对象"><a href="#3、请介绍一下XMLhttprequest对象" class="headerlink" title="3、请介绍一下XMLhttprequest对象"></a>3、请介绍一下XMLhttprequest对象</h1><p><em>ajax的核心是JavaScript对象XMLHTTPRequest。该对象在Internet Explorer 5中首次引入，它是一种支持异步请求的技术。简而言之，XMLHTTPRequest使您可以使用JavaScript向服务器提出请求并处理响应，而不阻塞用户。通过XMLHTTPRequest对象，Web开发人员可以在页面加载以后进行页面的局部更新。</em></p>
 <h1 id="4、ajax技术体系的组成部分有哪些"><a href="#4、ajax技术体系的组成部分有哪些" class="headerlink" title="4、ajax技术体系的组成部分有哪些"></a>4、ajax技术体系的组成部分有哪些</h1><p><em>HTML，css，dom，xml，XMLHTTPRequest，JavaScript</em></p>
@@ -114,13 +117,13 @@
 <h1 id="9、XMLHTTPRequest对象在IE和Firefox中创建方式有没有不同"><a href="#9、XMLHTTPRequest对象在IE和Firefox中创建方式有没有不同" class="headerlink" title="9、XMLHTTPRequest对象在IE和Firefox中创建方式有没有不同"></a>9、XMLHTTPRequest对象在IE和Firefox中创建方式有没有不同</h1><p><em>有，IE中通过new ActiveXObject() 得到，Firefox中通过newXMLHTTPRequest() 得到</em></p>
 <h1 id="10、什么是XML"><a href="#10、什么是XML" class="headerlink" title="10、什么是XML"></a>10、什么是XML</h1><p><em>XML是扩展标记语言，能够用一系列简单的标记描述数据</em></p>
 <h1 id="11、ajax的全称是什么？介绍一下ajax"><a href="#11、ajax的全称是什么？介绍一下ajax" class="headerlink" title="11、ajax的全称是什么？介绍一下ajax"></a>11、ajax的全称是什么？介绍一下ajax</h1><p><em>ajax的全称是Asynchronous JavaScript And XML</em><br><em>ajax是2005年由Google发起并流行起来的编程方法，ajax不是一个新的编程语言，但是它是一个使用已有标准的新的编程技术。使用ajax可以创建更好，更快，更用户界面友好的web应用。（ajax技术基于JavaScript和HTTP Request）</em></p>
-<h1 id="12、ajax都有哪些优点和缺点？"><a href="#12、ajax都有哪些优点和缺点？" class="headerlink" title="12、ajax都有哪些优点和缺点？"></a>12、ajax都有哪些优点和缺点？</h1><p>###1、优点<br><em><li>1.最大的一点是页面无刷新，用户的体验非常好</li></em><br><em><li>2.使用异步方法与服务器通信，具有更加迅速的响应能力</li></em><br><em><li>3.可以把以前一些服务器负担的工作转嫁到客户端，利用客户端闲置的能力来处理，减轻服务器和带宽的负担，节约空间和宽带租用成本。并且减轻服务器的负担，ajax的原则是“按需取数据”，可以最大程度减少冗余请求，和响应对服务器造成的负担</li></em><br><em><li>4.基于标准化的并被广泛支持的技术，不需要下载插件或者小程序</li></em></p>
-<p>###2、缺点<br><em><li>1.ajax不支持浏览器back按钮</li></em><br><em><li>2.安全问题ajax暴露了与服务器交互的细节</li></em><br><em><li>3.对搜索引擎的支持比较弱</li></em><br><em><li>4.破坏了程序的异常机制</li></em><br><em><li>5.不容易调试</li></em></p>
+<h1 id="12、ajax都有哪些优点和缺点？"><a href="#12、ajax都有哪些优点和缺点？" class="headerlink" title="12、ajax都有哪些优点和缺点？"></a>12、ajax都有哪些优点和缺点？</h1><h4 id="1、优点"><a href="#1、优点" class="headerlink" title="1、优点"></a>1、优点</h4><p><em><li>1.最大的一点是页面无刷新，用户的体验非常好</li></em><br><em><li>2.使用异步方法与服务器通信，具有更加迅速的响应能力</li></em><br><em><li>3.可以把以前一些服务器负担的工作转嫁到客户端，利用客户端闲置的能力来处理，减轻服务器和带宽的负担，节约空间和宽带租用成本。并且减轻服务器的负担，ajax的原则是“按需取数据”，可以最大程度减少冗余请求，和响应对服务器造成的负担</li></em><br><em><li>4.基于标准化的并被广泛支持的技术，不需要下载插件或者小程序</li></em></p>
+<h4 id="2、缺点"><a href="#2、缺点" class="headerlink" title="2、缺点"></a>2、缺点</h4><p><em><li>1.ajax不支持浏览器back按钮</li></em><br><em><li>2.安全问题ajax暴露了与服务器交互的细节</li></em><br><em><li>3.对搜索引擎的支持比较弱</li></em><br><em><li>4.破坏了程序的异常机制</li></em><br><em><li>5.不容易调试</li></em></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/02/28/AJAX/" data-id="cjsoevpvp0007e4vzb4p54oel" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2019/02/28/AJAX/" data-id="cjsq2qlva00005cvz4xeyxjst" class="article-share-link">分享</a>
       
       
     </footer>
